@@ -160,11 +160,11 @@ def geetest_crack(driver, keyword):
         # yoffset=y-445:这里也是一样的。不过要注意的是不同的浏览器渲染出来的结果是不一样的，要保证最终的计算后的值是22，也就是圆球高度的一半
         if random.randint(1, 100) > 90:
             # ActionChains(driver).move_to_element_with_offset(to_element=element, xoffset=track+22, yoffset=y - 416).perform()
-            ActionChains(driver).move_to_element_with_offset(to_element=element, xoffset=track+22, yoffset=y - 416 - 88).perform()
+            ActionChains(driver).move_to_element_with_offset(to_element=element, xoffset=track+22, yoffset=y - 0).perform()
         else:
             y += y_delta
             # ActionChains(driver).move_to_element_with_offset(to_element=element, xoffset=track+22, yoffset=y - 416).perform()
-            ActionChains(driver).move_to_element_with_offset(to_element=element, xoffset=track+22, yoffset=y - 416 - 88).perform()
+            ActionChains(driver).move_to_element_with_offset(to_element=element, xoffset=track+22, yoffset=y - 0).perform()
 
         # 间隔时间也通过随机函数来获得
         time.sleep(random.randint(10, 50)/150)
